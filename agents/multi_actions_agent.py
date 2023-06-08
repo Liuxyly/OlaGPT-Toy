@@ -28,6 +28,7 @@ from agent_template.ValidationThought.tool import ValidationThought
 from agent_template.DisassembleThought.tool import DisassembleThought
 from utils.evaluation import evaluation
 from utils.parse_option import parse_option
+from model.openLLM.chatglm import ChatGLM
 
 args = get_arguments()
 os.environ["GOOGLE_CSE_ID"] = configs['tools']['google_cse_id']
@@ -200,8 +201,12 @@ if __name__ == '__main__':
     # Define custom LLM
     model_name = configs['model_name']
     vote_mode = configs['vote_mode']
-    # llm = OpenAI(model_name=model_name, temperature=0)
-    llm = ChatOpenAI(model_name=model_name, temperature=0)
+    llm = None
+    if model_name == 'chat-glm':
+        llm = ChatGLM()
+     else:  
+        # llm = OpenAI(model_name=model_name, temperature=0)
+        llm = ChatOpenAI(model_name=model_name, temperature=0)
 
     # Define which tools the agent can use to answer user queries
     tools = [
