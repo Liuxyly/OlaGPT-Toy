@@ -9,7 +9,8 @@ from langchain.chains import LLMChain
 from langchain import OpenAI, SerpAPIWrapper, PromptTemplate, FewShotPromptTemplate, BasePromptTemplate
 from langchain.chains.base import Chain
 from langchain.input import get_color_mapping
-from langchain.schema import AgentAction, AgentFinish, BaseLanguageModel, BaseMessage
+from langchain.schema import AgentAction, AgentFinish, BaseMessage
+from langchain.base_language import BaseLanguageModel
 from typing import Any, Dict, List, Optional, Sequence, Tuple, Union
 from pathlib import Path
 from langchain.tools import BaseTool
