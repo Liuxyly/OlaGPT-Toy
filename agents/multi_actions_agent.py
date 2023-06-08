@@ -203,10 +203,10 @@ if __name__ == '__main__':
     vote_mode = configs['vote_mode']
     llm = None
     if model_name == 'chat-glm':
-        llm = ChatGLM()
-     else:  
-        # llm = OpenAI(model_name=model_name, temperature=0)
-        llm = ChatOpenAI(model_name=model_name, temperature=0)
+      llm = ChatGLM()
+    else:  
+      # llm = OpenAI(model_name=model_name, temperature=0)
+      llm = ChatOpenAI(model_name=model_name, temperature=0)
 
     # Define which tools the agent can use to answer user queries
     tools = [
