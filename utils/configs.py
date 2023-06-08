@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 configs = {
-    'model_name': 'gpt-3.5-turbo',
+    'model_name': 'chat-glm',
     'openai_api_key': 'your key',
     'agents': {
 
