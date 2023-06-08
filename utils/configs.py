@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 configs = {
     'model_name': 'chat-glm',
+    'path_or_repo': '/content/glm_6b_models',
     'openai_api_key': 'your key',
     'agents': {
 
