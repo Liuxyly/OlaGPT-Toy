@@ -7,7 +7,7 @@ from langchain.tools.base import BaseTool
 from langchain.prompts import StringPromptTemplate
 from langchain import OpenAI, GoogleSearchAPIWrapper, LLMChain
 from langchain.chat_models import ChatOpenAI
-from langchain.base_language import AgentAction, AgentFinish
+from langchain.schema import AgentAction, AgentFinish
 
 # import custom module
 import sys
